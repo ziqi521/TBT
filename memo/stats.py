@@ -1,3 +1,11 @@
+'''
+@Author: your name
+@Date: 2020-04-28 20:22:53
+@LastEditTime: 2020-04-28 22:12:59
+@LastEditors: your name
+@Description: In User Settings Edit
+@FilePath: \TBT\memo\stats.py
+'''
 import os
 import numpy as np
 import matplotlib.pyplot as plt
