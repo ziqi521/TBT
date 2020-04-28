@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from prettytable import PrettyTable
 
-directory = './result'
+directory = './memo/result'
 lst = os.listdir(directory)
 count = 0
 count_star = 0
@@ -58,11 +58,18 @@ for i in lst:
                 count_star_s += 1
             if '*' in line2 and '$' not in line2:
                 count_star_ns += 1
-
-            l = line2.strip().split()
-            if len(set(l)) == 1 and l[0] == '-1':
-                count_mo += 1
-            else:
+            ok = False
+            s = set(line2.split()[:-1])
+            if len(s) == 1:
+                if '-1' in s:
+                    count_mo += 1
+            if len(s) == 2:
+                ok = not ('-1' in s or '-2' in s)
+            elif len(s) == 3:
+                ok = not ('-1' in s and '-2' in s)
+            elif len(s) > 3:
+                ok = True
+            if ok:
                 if '*' not in line2 and '$' not in line2 and '^' not in line2:
                     count_no += 1
             line = f.readline()

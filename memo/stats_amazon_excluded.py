@@ -1,11 +1,3 @@
-'''
-@Author: your name
-@Date: 2020-04-28 20:22:53
-@LastEditTime: 2020-04-28 21:07:00
-@LastEditors: Please set LastEditors
-@Description: In User Settings Edit
-@FilePath: \TBT\memo\stats_amazon_excluded.py
-'''
 import os
 import numpy as np
 import matplotlib.pyplot as plt
